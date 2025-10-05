@@ -50,6 +50,19 @@
           transform: scale(1);
         }
       }
+
+      .carousel-img {
+        max-height: 450px; /* default for mobile */
+        object-fit: cover;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        /* md breakpoint */
+        .carousel-img {
+          max-height: 500px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -88,20 +101,61 @@
         </div>
       </nav>
       <div class="row align-items-center">
-        <div class="col-12 col-md-6 fade-in ms-auto text-center text-md-end">
+        <div class="col-12 col-md-6 fade-in ms-auto text-center text-md-center">
           <h1>Chayanit Kitmek</h1>
           <h2 class="badge badge-pulse text-bg-secondary">Junior Developer</h2>
           <p>Dedicated. Never Give Up. Moving forward.</p>
         </div>
-        <div
-          class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start"
-        >
-          <img
-            class="fade-in object-fit--md-cover border rounded img-fluid"
-            src="./asset/picture-hero.jpg"
-            alt=""
-            style="max-height: 600px"
-          />
+        <div class="col-12 col-md-6 fade-in">
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./asset/picture-hero.jpg"
+                  class="carousel-img img-fluid rounded"
+                  alt="Slide 1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./asset/picture-hero-2.jpg"
+                  class="carousel-img img-fluid rounded"
+                  alt="Slide 2"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./asset/picture-hero-3.jpg"
+                  class="carousel-img img-fluid rounded"
+                  alt="Slide 3"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
       </div>
       <div class="row">
