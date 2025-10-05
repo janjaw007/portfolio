@@ -63,6 +63,35 @@
           max-height: 500px;
         }
       }
+
+      .typing-effect {
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        border-right: 2px solid #0d6efd;
+        animation: blink-caret 0.6s step-end infinite,
+          typing 5s steps(36, end) forwards;
+        width: 0;
+      }
+
+      @keyframes blink-caret {
+        0%,
+        100% {
+          border-color: transparent;
+        }
+        50% {
+          border-color: #0d6efd;
+        }
+      }
+
+      @keyframes typing {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 36ch;
+        }
+      }
     </style>
   </head>
   <body>
@@ -103,8 +132,13 @@
       <div class="row align-items-center">
         <div class="col-12 col-md-6 fade-in ms-auto text-center text-md-center">
           <h1>Chayanit Kitmek</h1>
-          <h2 class="badge badge-pulse text-bg-secondary">Junior Developer</h2>
-          <p>Dedicated. Never Give Up. Moving forward.</p>
+          <div>
+            <h2 class="badge badge-pulse text-bg-secondary">
+              Junior Developer
+            </h2>
+          </div>
+
+          <p class="typing-effect">Dedicated. Never Give Up. Moving forward.</p>
         </div>
         <div class="col-12 col-md-6 fade-in">
           <div id="carouselExample" class="carousel slide">
