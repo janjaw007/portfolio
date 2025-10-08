@@ -10,6 +10,10 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
     <style>
       .nav-link:hover {
         color: #0d6efd;
@@ -30,7 +34,12 @@
         }
       }
 
-      img:hover {
+      #carouselExample {
+        border-radius: 40px;
+        overflow: hidden;
+      }
+
+      #carouselExample:hover img {
         transform: scale(1.03);
         transition: transform 0.4s ease;
       }
@@ -91,6 +100,30 @@
         100% {
           width: 36ch;
         }
+      }
+
+      .section-title {
+        margin-top: 10px;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      .section-title span {
+        position: relative;
+      }
+
+      .section-title span::after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        background-color: #0d6efd;
+        border-radius: 15px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+      .card-about {
+        flex-grow: 1;
       }
     </style>
   </head>
@@ -192,10 +225,47 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-md-3"></div>
-        <div class="col-12 col-md-3"></div>
-        <div class="col-12 col-md-3"></div>
+      <div class="row mt-2">
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-start">
+          <h2 class="section-title"><span>About</span></h2>
+          <div class="card card-about">
+            <div class="card-body">
+              <p class="card-text">
+                I was a Civil Engineer, but I’m currently pursuing a Master’s in
+                Computer Science. I’m a quick learner and highly adaptable, and
+                now I’m growing my career as a Junior Developer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-start">
+          <h2 class="section-title"><span>Stack</span></h2>
+          <div class="row card-about">
+            <div class="col-6">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="bi bi-filetype-js text-warning me-2"></i> JavaScript
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-filetype-php text-info me-2"></i> PHP
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-cup-fill text-danger me-2"></i> Java
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="bi bi-hash text-secondary me-2"></i> C#
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-filetype-py text-success me-2"></i> Python
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script
