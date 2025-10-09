@@ -155,6 +155,14 @@
         color: #6c757d;
         font-size: 0.95rem;
       }
+
+      .btn-contact {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .btn-contact:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      }
     </style>
   </head>
   <body>
@@ -187,7 +195,7 @@
               <a class="nav-link" href="#project">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -360,7 +368,45 @@
           </div>
         </div>
       </div>
+      <div class="row mt-3 mb-2 fade-in-about" id="contact">
+        <h2 class="section-title"><span>Contact</span></h2>
+        <div class="col d-flex justify-content-center gap-3">
+          <a
+            href="https://github.com/janjaw007"
+            target="_blank"
+            class="btn-contact btn btn-dark"
+            style="width: 10rem"
+            ><i class="bi bi-github"></i> Github</a
+          >
+          <a
+            href="https://www.linkedin.com/in/chayanitkitm/"
+            target="_blank"
+            class="btn-contact btn btn-dark"
+            style="width: 10rem"
+            ><i class="bi bi-linkedin"></i> Linkedin</a
+          >
+          <a
+            href="https://drive.google.com/file/d/1om_QZ3DWM6C5-M1W6299GTu_CV7By85w/view?usp=sharing"
+            target="_blank"
+            class="btn-contact btn btn-dark"
+            style="width: 10rem"
+            ><i class="bi bi-file-person-fill"></i> Resume</a
+          >
+        </div>
+      </div>
     </div>
+    <footer class="row mt-3 fade-in-about bg-dark">
+      <div class="col">
+        <div class="text-secondary fs-6 text-end">
+          &copy; 2025 All Right Reserved
+        </div>
+      </div>
+      <div class="col">
+        <div class="text-secondary fs-6 text-start">
+          Create by Chayanit Kitmek
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
